@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+git config --global --add safe.directory '*'
 git clang-format --force --style="$1" $2
 status=$?
 
