@@ -1,8 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine:latest
 
-RUN apt-get update
-
-RUN apt-get -y install git clang-format
+RUN apk add --no-cache clang-extra-tools
 
 COPY entrypoint.sh /entrypoint.sh
 
