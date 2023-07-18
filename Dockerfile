@@ -1,10 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 
 RUN apt-get update
 
-RUN apt-get install -y \
-  git \
-  clang-format 
+RUN apt-get -y install clang-format
 
 COPY entrypoint.sh /entrypoint.sh
 
