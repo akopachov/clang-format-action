@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
 
       # format the latest commit
-      - uses: akopachov/clang-format-action@main
+      - uses: akopachov/git-clang-format-diff-action@v1.0.0
         with:
           style: file # use one of clang-format's supported styles or leave this out to use the style in your .clang-format file
           commit: HEAD~1 # Ref to compare with
