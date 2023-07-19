@@ -1,4 +1,4 @@
-name: 'Git CLang Format Action'
+name: 'Git CLang Format Diff Action'
 description: 'An action which checks and formats the code using git-clang-format utility'
 author: 'akopachov'
 branding:
