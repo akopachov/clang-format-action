@@ -1,6 +1,6 @@
 # clang-format action
 
-runs clang-format on the diff of the most recent commit
+Runs clang-format on the diff
 
 # usage
 
@@ -21,14 +21,15 @@ jobs:
         with:
           # check out HEAD on the branch
           ref: ${{ github.head_ref }}
-          # make sure the parent commit is grabbed as well, because
-          # that's what will get formatted (i.e. the most recent commit)
-          fetch-depth: 2
+          # fetch everything to be able to compare with any ref
+          fetch-depth: 0
+
       # format the latest commit
-      - uses: purduesigbots/clang-format-action@1
-        # use one of clang-format's supported styles or leave this out to use the style in your .clang-format file
+      - uses: akopachov/clang-format-action@main
         with:
-          style: file
+          style: file # use one of clang-format's supported styles or leave this out to use the style in your .clang-format file
+          commit: HEAD~1 # Ref to compare with
+
       # commit the changes (if there are any)
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.1.2
@@ -37,7 +38,7 @@ jobs:
           branch: ${{ github.head_ref }}
 ```
 
-## why
+## Why
 
 there are already a couple versions of this action floating around ([cvra/clang-format-action](https://github.com/cvra/clang-format-action) and [IvanLudvig/clang-format-action](https://github.com/IvanLudvig/clang-format-action)) but these either
 
