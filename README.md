@@ -1,4 +1,4 @@
-# Git CLang Format Action
+# Git CLang Format Diff Action
 
 Runs clang-format on the diff
 
