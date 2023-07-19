@@ -1,12 +1,12 @@
-name: 'git-clang-format action'
-description: 'run clang-format on your code diff'
+name: 'Git CLang Format Action'
+description: 'An action which checks and formats the code using git-clang-format utility'
 author: 'akopachov'
 branding:
   icon: align-center
   color: yellow
 inputs: 
   style:
-    description: 'style passed to clang-format. reads .clang-format file in the repo by default. see clang-format docs for more.'
+    description: 'Style passed to clang-format. reads .clang-format file in the repo by default. see clang-format docs for more.'
     default: 'file'
   commit:
     description: 'Commit to compare with'
