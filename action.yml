@@ -1,6 +1,6 @@
-name: 'clang-format action'
-description: 'run clang-format on your code'
-author: 'purduesigbots'
+name: 'git-clang-format action'
+description: 'run clang-format on your code diff'
+author: 'akopachov'
 branding:
   icon: align-center
   color: yellow
